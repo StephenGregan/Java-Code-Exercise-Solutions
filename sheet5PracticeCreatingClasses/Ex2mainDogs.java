@@ -6,7 +6,7 @@ public class Ex2mainDogs {
 
 		Ex2Dogs d1 = new Ex2Dogs();
 
-		d1.setBreed("Staff");
+		d1.setBreed(4);
 		d1.setColour("Black");
 		d1.setOwnersName("John");
 
@@ -16,7 +16,7 @@ public class Ex2mainDogs {
 
 		System.out.println("-----------------");
 
-		Ex2Dogs d2 = new Ex2Dogs("Bulldog","Red","Bob");
+		Ex2Dogs d2 = new Ex2Dogs(5,"Red","Bob");
 		System.out.println(d2);
 
 		System.out.println("Numbers of dog objects created" + Ex2Dogs.dogCounter);

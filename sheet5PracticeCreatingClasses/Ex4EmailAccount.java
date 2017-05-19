@@ -16,6 +16,7 @@ public class Ex4EmailAccount {
 
 	public Ex4EmailAccount(){
 		emailCounter++;
+		maximumStorageLimit = Max_Stroage_100_Gb;
 
 	}
 
@@ -32,6 +33,7 @@ public class Ex4EmailAccount {
 	}
 
 	public void setEmailAddress(String emailAddress){
+		/*
 		if(emailAddress.contains("@") && emailAddress.contains(".")){
 			if(emailAddress.indexOf("@") < emailAddress.lastIndexOf(".")){
 				this.emailAddress = emailAddress;
@@ -41,20 +43,39 @@ public class Ex4EmailAccount {
 			}
 			
 		}
+		*/
+		String regex = "[\\w.]+@[\\w-]+\\.[a-zA-Z]{2,}";
+		
+		if(emailAddress.matches(regex)){
+			this.emailAddress = emailAddress;
+		}else{
+			System.out.println("Invalid Email");
+			
+		}
 
 	}
 
 	public void setPassword(String password){
+		/*
 		if(password.length() >= 8 && password.length() <= 20){
 			this.password = password;	
 		}else{
 			System.out.println("Password is invalid");
 
 		}
+		*/
+		String regex = "(?=.*[a-z])(?=.*[A-Z]).{5,20}";
 
+		if(password.matches(regex)){
+			this.password = password;
+		}else{
+			System.out.println("Invalid password");
+			
+		}
 	}
 
 	public void setMaximumStoragelimit(int maximumStorageLimit){
+		/*
 		switch(maximumStorageLimit){
 		case Max_Stroage_100_Gb:
 		case Max_Storage_500_Gb:
@@ -64,6 +85,14 @@ public class Ex4EmailAccount {
 		default:
 			System.out.println(maximumStorageLimit + " : is not valid");
 			break;
+		}
+		*/
+		if(maximumStorageLimit == Max_Stroage_100_Gb || maximumStorageLimit == Max_Storage_500_Gb ||
+			maximumStorageLimit == Max_Storage_1_Tb){
+			this.maximumStorageLimit = maximumStorageLimit;	
+		}else{
+			System.out.println(maximumStorageLimit + "is not valid, setting to default value");
+			
 		}
 
 	}
@@ -103,7 +132,8 @@ public class Ex4EmailAccount {
 	public String toString(){
 		return "Email Address: " + emailAddress +
 				"Password: " + password + 
-				"Storage: " + maximumStorageLimit;
+				"Storage: " + maximumStorageLimit +
+				(maximumStorageLimit == Max_Storage_1_Tb ? "Tb" : "Gb");
 
 	}
 

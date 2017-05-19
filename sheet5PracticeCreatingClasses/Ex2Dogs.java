@@ -2,27 +2,39 @@ package sheet5PracticeCreatingClasses;
 
 public class Ex2Dogs {
 
-	private String breed;
+	private int breed;
 	private String colour;
 	private String ownersName;
 
 	public static int dogCounter;
-
+	
+	public static final int HUSKY = 0;
+	public static final int BOXER = 1;
+	public static final int COLLIE = 2;
+	public static final int ALSATION = 3;
+	public static final int GERMAN_SHEPARD = 4;
+	
 	public Ex2Dogs(){
 		dogCounter++;
 
 	}
 
-	public Ex2Dogs(String breed, String colour, String ownersName){
+	public Ex2Dogs(int breed, String colour, String ownersName){
 		this();
-		this.breed = breed;
+		//this.breed = breed;
+		setBreed(breed);
 		this.colour = colour;
 		this.ownersName = ownersName;
 
 	}
 
-	public void setBreed(String breed){
-		this.breed = breed;
+	public void setBreed(int breed){
+		if(breed <= 0 && breed <= 5){
+			this.breed = breed;	
+		}else{
+System.out.println("Invalid breed");
+			
+		}
 
 	}
 
@@ -36,7 +48,7 @@ public class Ex2Dogs {
 
 	}
 
-	public String getBreed(){
+	public int getBreed(){
 		return breed;
 
 	}
@@ -50,9 +62,27 @@ public class Ex2Dogs {
 		return ownersName;
 
 	}
+	
+	public String getBreedAsString(){
+		switch(breed){
+		case HUSKY:
+			return "Husky";
+		case BOXER:
+			return "Boxer";
+		case COLLIE:
+			return "Collie";
+		case ALSATION:
+			return "Alsation";
+		case GERMAN_SHEPARD:
+			return "German Shepard";
+			default:
+				return "Breed not set";
+		}
+		}
+		
 
 	public String toString(){
-		return "\n\nBreed: " + breed + "\n\nColour : " + colour + "\n\nOwnersName : " + ownersName;
+		return "\n\nBreed: " + getBreedAsString() + "\n\nColour : " + colour + "\n\nOwnersName : " + ownersName;
 
 	}
 
