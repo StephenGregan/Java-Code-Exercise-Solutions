@@ -1,0 +1,9 @@
+# ignore all eqlipse setting files
+.classpath
+.metadata
+project
+.recommenders
+.settings
+# Ignore all .class files and bin folder
+*.class
+/bin/
