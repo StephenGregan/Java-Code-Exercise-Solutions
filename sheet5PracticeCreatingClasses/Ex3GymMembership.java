@@ -34,7 +34,7 @@ public class Ex3GymMembership {
 		this.membershipCost = membershipCost;
 		setPaymentFrequency(paymentFrequency);
 		calculateCost();
-		
+
 	}
 
 
@@ -62,19 +62,19 @@ public class Ex3GymMembership {
 			System.out.println("Invalid membership type");
 
 		}
-		*/
+		 */
 		switch(paymentFrequency){
 		case PayAsYouGo:
 		case MonthlyPayment:
 		case YearlyPayment:
 			this.paymentFrequency = paymentFrequency;
 			break;
-			default:
-				System.out.println("Invalid payment frequency, setting to Monthly");
-				this.paymentFrequency = MonthlyPayment;
-				
+		default:
+			System.out.println("Invalid payment frequency, setting to Monthly");
+			this.paymentFrequency = MonthlyPayment;
+
 		}
-		
+
 	}
 
 	public void setDefaultMembershipNumber(int defaulMembershipNumber) {
@@ -88,9 +88,9 @@ public class Ex3GymMembership {
 	/*
 	public void setCalculateCost(double calculateCost){
 		return calculateCost;
-		
+
 	}
-	*/
+	 */
 
 	public String getMembersName(){
 		return membersName;
@@ -116,17 +116,19 @@ public class Ex3GymMembership {
 		return defaultMembershipNumber;
 
 	}
-	
+
+
 	public double calculateCost(){
 		double yearly = 350.00;
 		if(paymentFrequency == PayAsYouGo){
 			cost = yearly / 50;
-			}else if(paymentFrequency == YearlyPayment){
-				cost = yearly;
-			}else{
-				cost = yearly / 12 * 1.5;
-				return cost;
-			}
+		}else if(paymentFrequency == YearlyPayment){
+			cost = yearly;
+		}else{
+			cost = yearly / 12 * 1.5;
+
+		}
+		return cost;
 
 	}
 	public String getPaymentFrequencyAsString(){

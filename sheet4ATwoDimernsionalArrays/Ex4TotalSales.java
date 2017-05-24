@@ -56,7 +56,7 @@ public class Ex4TotalSales {
 		}
 		// Prints out ----------- -------- --------. "s" represents String.
 		System.out.printf("%-15s%-12s%2$s","\n---------------", "-------------" , "---------------");
-		// Print String "Total",followed by the 5 numbers.
+		// Print String "Totals",followed by the 5 numbers.
 		System.out.printf("\n%s%7d%7d%7d%7d%7d","Totals",1500,1750,1625,1725,6600);
 
 	}

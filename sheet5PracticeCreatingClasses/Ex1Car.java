@@ -2,9 +2,9 @@ package sheet5PracticeCreatingClasses;
 
 public class Ex1Car {
 
-	private String make;
-	private String model;
-	private  double engineSize;
+	public String make;
+	public String model;
+	public  double engineSize;
 
 	public static int carCounter;
 
@@ -69,7 +69,7 @@ public class Ex1Car {
 	}
 
 	public String toString(){
-		return "\n\nMake" + make + "\n\nModel" + model + "\n\nEngine Size" + engineSize; 
+		return "\n\nMake : " + make + "\n\nModel : " + model + "\n\nEngine Size : " + engineSize; 
 
 	}
 	
