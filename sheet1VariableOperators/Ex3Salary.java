@@ -1,6 +1,6 @@
 package sheet1VariableOperators;
 // Imports everything (*) from the java lang package 
-import java.lang.*;
+//import java.lang.*;
 import javax.swing.JOptionPane;
 
 public class Ex3Salary {

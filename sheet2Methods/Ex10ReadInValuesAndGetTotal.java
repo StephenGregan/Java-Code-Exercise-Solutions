@@ -15,13 +15,15 @@ public class Ex10ReadInValuesAndGetTotal {
 		
 		System.out.print("Please enter the third number: ");
 		double num3 = input.nextDouble();
-		
+	
 		double total = getTotal(num1,num2,num3);
 		System.out.println("The total is: " + total);
+		
 	}
 	public static double getTotal(double num1,double num2,double num3){
 		double result = num1 + num2 + num3;
 		return result;
 		
 	}
+	
 }

@@ -9,20 +9,22 @@ public class Ex1EmployeeClass {
 	private int employeeNumber;
 
 	public static final int numberOfEmployees = 0;
-	public static int numOfEmployeeCounter;
+	public static int numOfEmployeeCounter = 1000;
 	
 	public Ex1EmployeeClass() {
 		numOfEmployeeCounter++;
+		this.employeeNumber = numOfEmployeeCounter;
 	}
 	
 	public Ex1EmployeeClass(String name,int age,double salary,
-							int noOfSickDays,int employee_number) {
+							int noOfSickDays) {
 		this();
 		setName(name);
 		setAge(age);
 		setSalary(salary);
 		setNoOfSickDays(noOfSickDays);
 		setEmployeeNumber(employeeNumber);
+		
 	}
 	
 	public String getName() {
