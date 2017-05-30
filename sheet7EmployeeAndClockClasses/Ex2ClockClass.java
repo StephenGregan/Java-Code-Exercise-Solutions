@@ -63,7 +63,7 @@ public class Ex2ClockClass {
 	public String toString() {
 		return "Hours : " + hours + ", minutes : " + minutes + ", seconds :" + seconds;
 	}
-
+	
 	public int incrementHours(int addHours) {
 		hours += addHours;
 		setHours(hours);
@@ -82,7 +82,8 @@ public class Ex2ClockClass {
 		return seconds;
 	}
 
-	public void reset(){
+	public void reset() {
+		//hours = minutes = seconds = 0;
 		hours = 0;
 		minutes = 0;
 		seconds = 0;
