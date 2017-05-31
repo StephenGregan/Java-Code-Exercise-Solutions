@@ -1,9 +1,11 @@
 package sheet11InheritancePayRollSystem;
 
-public final class CommisionWorker {
+import java.time.LocalDate;
 
-		private double salary;
-		private double commission;
+public final class CommisionWorker extends Employee {
+
+		private double salary ;
+		private double commission ;
 		private int quantity;
 		
 		public  CommisionWorker(){
@@ -11,8 +13,11 @@ public final class CommisionWorker {
 			
 		}
 		
-		public CommisionWorker(double salary,double commission,int quantity){
-
+		public CommisionWorker(String firstName,String lastName,LocalDate dateOfBirth,double salary,double commission,int quantity){
+			super(firstName,lastName,dateOfBirth);
+			this.salary = salary;
+			this.commission = commission;
+			this.quantity = quantity;
 			
 		
 		
@@ -42,15 +47,26 @@ public final class CommisionWorker {
 			this.quantity = quantity;
 		}
 		
-		public double getEarnings(){
+		public void setEarnings(double salary){
+			this.salary = salary;
 			
-			return 0;
+		}
+		
+		public double getEarnings(){
+			salary = salary + commission * quantity;
+			return salary;
 		}
 
 		@Override
 		public String toString() {
-			return "CommisionWorker [salary=" + salary + ", commission=" + commission + ", quantity=" + quantity + "]";
+			return super.toString() + String.format("\nCommission worker earns : %.2f\n",getEarnings());
 		}
+
+	/*@Override
+	public void getEarnings() {
+		// TODO Auto-generated method stub
+		
+	}*/
 		
 		
 }

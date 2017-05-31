@@ -1,21 +1,24 @@
 package sheet11InheritancePayRollSystem;
 
-public final class Boss {
+import java.time.LocalDate;
+
+public final class Boss extends Employee {
 
 	private double weeklySalary;
 	
-	public Boss(){
+	
+	public Boss() {
 		
 		
 	}
 	
-	public Boss(String firstName,String lastName,double weeklysalary){
-		this.weeklySalary = weeklysalary;
-		
+	public Boss(String firstName,String lastName,LocalDate dateOfBirth,double weeklySalary) {
+	super(firstName,lastName,dateOfBirth);
+	this.weeklySalary = weeklySalary;
 		
 	}
 	
-	public void setWeeklySalary(){
+	public void setWeeklySalary() {
 		
 		
 	}
@@ -24,14 +27,20 @@ public final class Boss {
 		return weeklySalary;
 	}
 
-	public void calculateBossEarnings(){
+	/*public double getEarnings() {
 		
-		
-	}
+		return getEarnings();
+	}*/
 
 	@Override
 	public String toString() {
-		return "Boss : " + super.
+		return super.toString() + String.format("\nThe weekly salary is %.2f \n", getWeeklySalary());
+	}
+
+	@Override
+	public double getEarnings() {
+		
+		return weeklySalary;
 	}
 	
 	

@@ -15,6 +15,7 @@ public abstract class Employee {
 	}
 	
 	public Employee(String firstName,String lastName,LocalDate dateOfBirth){
+		this();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.dateOfBirth = dateOfBirth;
@@ -39,7 +40,7 @@ public abstract class Employee {
 		this.dateOfBirth = dateOfBirth;
 	}
 	
-	public abstract void getEarnings();
+	public abstract double getEarnings();
 
 	@Override
 	public String toString() {
