@@ -8,12 +8,12 @@ public final class CommisionWorker extends Employee {
 		private double commission ;
 		private int quantity;
 		
-		public  CommisionWorker(){
+		public  CommisionWorker() {
 			
 			
 		}
 		
-		public CommisionWorker(String firstName,String lastName,LocalDate dateOfBirth,double salary,double commission,int quantity){
+		public CommisionWorker(String firstName,String lastName,LocalDate dateOfBirth,double salary,double commission,int quantity) {
 			super(firstName,lastName,dateOfBirth);
 			this.salary = salary;
 			this.commission = commission;
@@ -47,19 +47,19 @@ public final class CommisionWorker extends Employee {
 			this.quantity = quantity;
 		}
 		
-		public void setEarnings(double salary){
+		public void setEarnings(double salary) {
 			this.salary = salary;
 			
 		}
 		
-		public double getEarnings(){
-			salary = salary + commission * quantity;
+		public double getEarnings() {
+			salary = salary + (commission * quantity);
 			return salary;
 		}
 
 		@Override
 		public String toString() {
-			return super.toString() + String.format("\nCommission worker earns : %.2f\n",getEarnings());
+			return super.toString() + String.format("\nCommission worker earns = €%.2f\n",getEarnings());
 		}
 
 	/*@Override

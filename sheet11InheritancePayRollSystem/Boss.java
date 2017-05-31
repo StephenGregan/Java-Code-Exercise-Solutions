@@ -34,7 +34,7 @@ public final class Boss extends Employee {
 
 	@Override
 	public String toString() {
-		return super.toString() + String.format("\nThe weekly salary is %.2f \n", getWeeklySalary());
+		return super.toString() + String.format("\nThe weekly salary is = €%.2f \n", getWeeklySalary());
 	}
 
 	@Override

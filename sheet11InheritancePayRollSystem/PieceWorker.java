@@ -11,12 +11,12 @@ public final class PieceWorker extends Employee {
 	private int hoursWorked = 42;
 	
 	
-	public PieceWorker(){
+	public PieceWorker() {
 		
 		
 	}
 	
-	public PieceWorker(String firstName,String lastName,LocalDate dateOfBirth,double wagePerPrice,int hoursWorked){
+	public PieceWorker(String firstName,String lastName,LocalDate dateOfBirth,double wagePerPrice,int hoursWorked) {
 		super(firstName,lastName,dateOfBirth);
 		this.hoursWorked = hoursWorked;
 		this.wagePerPiece = wagePerPrice;
@@ -55,7 +55,7 @@ public final class PieceWorker extends Employee {
 		this.hoursWorked = hoursWorked;
 	}
 
-	public double getEarnings(){
+	public double getEarnings() {
 		if(hoursWorked > 40){
 			earnings = overtime * wagePerPiece;
 		}
@@ -64,7 +64,7 @@ public final class PieceWorker extends Employee {
 
 	@Override
 	public String toString() {
-		return super.toString() + String.format("\nPiece workers earnings are %.2f\n",getEarnings());
+		return super.toString() + String.format("\nPiece workers earnings are = €%.2f\n",getEarnings());
 	}
 	
 	

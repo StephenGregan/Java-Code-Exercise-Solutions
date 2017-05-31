@@ -2,18 +2,18 @@ package sheet11InheritancePayRollSystem;
 
 import java.time.LocalDate;
 
-public final class HourlyWorker extends Employee{
+public final class HourlyWorker extends Employee {
 
 	private double wage;
 	private int hoursWorked;
 	private double earnings;
 	
-	public HourlyWorker(){
+	public HourlyWorker() {
 		
 		
 	}
 	
-	public HourlyWorker(String firstName,String lastName,LocalDate dateOfBirth,double wage,int hoursWorked){
+	public HourlyWorker(String firstName,String lastName,LocalDate dateOfBirth,double wage,int hoursWorked) {
 		super(firstName,lastName,dateOfBirth);
 		this.wage = wage;
 		this.hoursWorked = hoursWorked;
@@ -43,7 +43,7 @@ public double getEarnings() {
 
 @Override
 public String toString() {
-	return super.toString() + String.format("\nHourly worker earnings are %.2f\n",getEarnings());
+	return super.toString() + String.format("\nHourly worker earnings are = €%.2f\n",getEarnings());
 }
 
 	

@@ -9,12 +9,12 @@ public abstract class Employee {
 	private String lastName;
 	private LocalDate dateOfBirth;
 	
-	public Employee(){
+	public Employee() {
 		
 		
 	}
 	
-	public Employee(String firstName,String lastName,LocalDate dateOfBirth){
+	public Employee(String firstName,String lastName,LocalDate dateOfBirth) {
 		this();
 		this.firstName = firstName;
 		this.lastName = lastName;
