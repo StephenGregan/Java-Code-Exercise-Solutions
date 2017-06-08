@@ -7,16 +7,19 @@ public class Ex3MainWeekday {
 	public static void main(String[] args) {
 		
 	try {
-			Ex3Weekday w1 = new Ex3Weekday("THURSDAY");
+			Ex3Weekday w1 = new Ex3Weekday("WEDNESDAY");
+			Ex3Weekday w2 = new Ex3Weekday("FRIDAY");
 		} catch (Ex3InvalidWeeklyException e) {
-			JOptionPane.showMessageDialog(null, "Invalid day please try again");
+			JOptionPane.showMessageDialog(null, "Invalid weekday please try again",null, JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();
-			System.exit(1);
+		///	System.exit(1);
 		}finally{
-			System.out.println("In the finally block");
+			JOptionPane.showMessageDialog(null, "Valid weekday........",null,JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(null, "In the finally block");
+			/*System.out.println("In the finally block");*/
 		}
 		
-		try {
+	/*	try {
 			Ex3Weekday w2 = new Ex3Weekday("FRIDAY");
 		} catch (Ex3InvalidWeeklyException e) {
 			JOptionPane.showMessageDialog(null, "Invalid day please try again");
@@ -24,7 +27,7 @@ public class Ex3MainWeekday {
 			System.exit(1);
 		}finally{
 			System.out.println("In the finally block");
-		}
+		}*/
 	}
 
 }

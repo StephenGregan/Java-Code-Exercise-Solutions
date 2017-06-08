@@ -15,16 +15,16 @@ public class WritingAndReadingFromAFile {
 		try{
 	
 		PrintWriter pw = new PrintWriter(filename);
-		pw.println("Hello");
+		pw.println("Hello\n\tHello");
 		pw.println("It's Thursday");
-		pw.flush();
+		//pw.flush();
 		pw.close();
 		}catch(FileNotFoundException e){
 			JOptionPane.showMessageDialog(null, "File could not be created");
 			e.printStackTrace();
 		}
 		
-		System.out.println("End of main");
+		//System.out.println("End of main");
 	
 		
 		try {
