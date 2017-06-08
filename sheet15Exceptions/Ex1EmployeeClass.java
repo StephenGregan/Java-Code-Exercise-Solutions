@@ -1,6 +1,6 @@
-package sheet7EmployeeAndClockClasses;
+package sheet15Exceptions;
 
-//import sheet15Exceptions.Ex1InvalidAgeException;
+import sheet15Exceptions.Ex1InvalidAgeException;
 
 public class Ex1EmployeeClass {
 	
@@ -19,7 +19,7 @@ public class Ex1EmployeeClass {
 	}
 	
 	public Ex1EmployeeClass(String name,int age,double salary,
-							int noOfSickDays) /*throws Ex1InvalidAgeException*/ {
+							int noOfSickDays) throws Ex1InvalidAgeException {
 		this();
 		setName(name);
 		setAge(age);
@@ -52,12 +52,12 @@ public class Ex1EmployeeClass {
 		return age;
 	}
 	
-	public void setAge(int age) /*throws Ex1InvalidAgeException */{
-		if(age >= 18 || age <= 65) {
+	public void setAge(int age) throws Ex1InvalidAgeException {
+		if(/*age > 0 && */age <= 65) {
 			this.age = age;	
 		}else{
-			//throw new Ex1InvalidAgeException();
-			System.out.println("Invalid age " + age);	
+			throw new Ex1InvalidAgeException("noooooooooo");
+			//System.out.println("Invalid age " + age);	
 		}
 	}
 	

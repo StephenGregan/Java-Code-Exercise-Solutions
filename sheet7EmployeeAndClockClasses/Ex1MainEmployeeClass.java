@@ -1,7 +1,7 @@
 package sheet7EmployeeAndClockClasses;
 
 //import java.util.Scanner;
-import sheet7EmployeeAndClockClasses.Ex1EmployeeClass;
+//import sheet7EmployeeAndClockClasses.Ex1EmployeeClass;
 
 public class Ex1MainEmployeeClass {
 
