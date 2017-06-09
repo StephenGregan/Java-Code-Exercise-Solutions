@@ -21,7 +21,6 @@ public class Electrician extends Trainee implements Apprentice {
 		setPhase(phase);
 	}
 
-	@Override
 	public String getEmployersName() {
 		
 		return employersName;
@@ -37,7 +36,6 @@ public class Electrician extends Trainee implements Apprentice {
 		}
 	}
 
-	@Override
 	public int getPhase() {
 		
 		return phase;

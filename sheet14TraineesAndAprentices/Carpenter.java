@@ -19,7 +19,6 @@ public class Carpenter extends Trainee implements Apprentice {
 		
 	}
 
-	@Override
 	public String getEmployersName() {
 		
 		return employersName;
@@ -30,7 +29,6 @@ public class Carpenter extends Trainee implements Apprentice {
 		
 	}
 
-	@Override
 	public int getPhase() {
 		
 		return phase;

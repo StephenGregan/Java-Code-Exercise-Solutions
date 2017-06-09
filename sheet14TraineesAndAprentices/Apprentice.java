@@ -9,11 +9,13 @@ public interface Apprentice {
 	int PHASE_FIVE = 5;
 	int PHASE_SIX = 6;
 	
-	 void setEmployersName(String employersName){
-		 String getemployersName();
+	 public void setEmployersName(String employersName);
+	public String getEmployersName();
 		 
-	 }
+	 
+	/* public String getEmployersName();*/
 	/* public String getEmployersName();*/
 	 public void setPhase(int phase);
-	 /*public int getPhase();*/
+	 public int getPhase();
+	/* public int getPhase();*/
 }

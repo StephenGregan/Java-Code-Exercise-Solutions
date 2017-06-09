@@ -21,9 +21,6 @@ public class Ex1MainEmployeeClass {
 		System.out.println(pp);
 		
 		} catch (Ex1InvalidAgeException e) {
-			// TODO Auto-generated catch block
-			
-			
 			e.printStackTrace();
 		}
 		/*pp.setName("Pat Jones");

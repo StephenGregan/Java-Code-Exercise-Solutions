@@ -21,9 +21,9 @@ public class Main {
 		Trainee [] allTrainees = {Electrician,Carpenter,SoftwareDeveloper,ComputerAidedDesign};
 		for(Trainee t : allTrainees){
 			if(t instanceof Apprentice &&
-				((Apprentice)t).getPhase() == Apprentice.PHASE_TWO){
+				((sheet14TraineesAndAprentices.Carpenter)t).getPhase() == Apprentice.PHASE_TWO){
 				System.out.println("All aprrentices are in phase two");
-				System.out.println("Trainee's name is : " + t.getName() + "Employers name is : " + (Apprentice)t).getEmployersName());
+				System.out.println("Trainee's name is : " + t.getName() + "Employers name is : " + ((Apprentice)t).getEmployersName());
 			}
 			
 			
