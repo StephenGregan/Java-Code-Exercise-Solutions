@@ -14,7 +14,7 @@ public class Ex5SearchForALetter {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("Enter a word");	
+		System.out.println("Enter a word\nWords entered are case sensitive!!");	
 		String s = scanner.nextLine();
 		
 		System.out.println("Enter a charcter");	
