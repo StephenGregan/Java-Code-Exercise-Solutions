@@ -17,7 +17,6 @@ public class Ex3UpdateTheMenuStringBuilder {
 		System.out.println(todaysMenu.concat(", jelly for dessert."));
 		/*sb.append("Thursday's Menu : Roast turkey with homemade turkey gravy, potatoes and veg of the day");
 		System.out.println(sb);*/
-			
 		}
 	
 }
